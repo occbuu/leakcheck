@@ -35,7 +35,6 @@ classifiers = [
 Homepage = "https://github.com/occbuu/leakcheck"
 Repository = "https://github.com/occbuu/leakcheck"
 Issues = "https://github.com/occbuu/leakcheck/issues"
-DOI = "https://doi.org/10.5281/zenodo.22196497"
 
 [project.optional-dependencies]
 table = ["pandas>=1.3"]

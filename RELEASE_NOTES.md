@@ -1,10 +1,13 @@
-# v1.0.1 local revision not yet published
+# v1.0.1 revised screening interface
 
 - Replaced public probability wording with screening score and neutral review bands. The legacy property remains an alias for compatibility.
 - Unsupported or missing classifier families now raise an error; approximate aliases for unrepresented algorithms are removed.
 - Added finite/integer/range checks and tests.
 - Added reproducible matched baselines, grouped uncertainty, per-source results, reliability/PR analysis, threshold/prevalence scenarios and input stress tests under `Code/Paper2B` and `results/paper2b_revision_v1`.
-- Preserved JSON weights; 18 local tests pass. No external diagnostic validation, new DOI, hosted CI or numerical coverage claim is made.
+- Preserved JSON weights; 18 local tests pass. No external diagnostic validation, hosted CI or numerical coverage claim is made.
+
+- Added an interface workflow and a JSON-only F1 by imbalance grid; retained the original controlled-corpus density plot.
+- Added `.zenodo.json` with the existing two authors for GitHub–Zenodo archiving of this tag. The old v1.0.0 DOI does not archive the current package.
 
 The following v1.0.0 notes are historical and describe the previous interface and original archive claims.
 

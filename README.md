@@ -6,7 +6,9 @@ The output is a **screening score**, not a calibrated probability that a publish
 
 ## Current revision
 
-Local code version **1.0.1** uses the unchanged v1.0.0 JSON weights, neutral review bands and strict supported-family handling. No new public release, verified archive or DOI is claimed for this revision. The identifier 10.5281/zenodo.22196497 belongs to the original manuscript's archive metadata; its contents were not verified during this revision.
+Version **1.0.1** uses the unchanged v1.0.0 JSON weights, neutral review bands and strict supported-family handling. The GitHub release is tagged `v1.0.1`. Zenodo archiving is requested by the repository's existing GitHub integration, using `.zenodo.json` metadata.
+
+The earlier DOI 10.5281/zenodo.22196497 was checked: its source archive is the older `ef27ad0` corpus repository and does not contain the shipped `src/leakcheck` package. It is not used as the archive DOI for this interface release. The DOI for this version must be verified against the published v1.0.1 source archive.
 
 Project URL: https://github.com/occbuu/leakcheck
 
@@ -59,11 +61,12 @@ Nonfinite inputs, invalid ratios and noninteger counts are rejected. Inputs outs
 python -m pip install -r Code/Paper2B/requirements_analysis.txt
 python Code/Paper2B/analyse_revision.py
 python Code/Paper2B/make_flow.py
+python Code/Paper2B/make_interface_assets.py
 ```
 
 The scripts locate files relative to the repository, independent of the current working directory. Existing complete-pair records are read from `results/raw_results.csv` and `data/processed/manifest.csv`. No duplicated corpus inputs or separate software snapshot is required.
 
-Revision outputs are in `results/paper2b_revision_v1/`: out-of-fold predictions, baselines, per-dataset and per-resampler metrics, reliability, grouped bootstrap, thresholds, prevalence scenarios, sensitivity, errors, three vector figures and measured environment/provenance.
+Revision outputs are in `results/paper2b_revision_v1/`: out-of-fold predictions, baselines, per-dataset and per-resampler metrics, reliability, grouped bootstrap, thresholds, prevalence scenarios, sensitivity, errors, the validation/SHAP/training figures, interface workflow, original density illustration, JSON-only F1 by imbalance grid and measured environment/provenance.
 
 The analysis reuses the cached prediction file only if its record identities, order, labels and F1 values match the reconstructed source corpus. To refit all folds, move `oof_predictions.csv` aside first. The analysis retains paired records within each source-held-out fold and within 1,000 dataset-cluster bootstrap samples. Bootstrap intervals condition on fixed held-out predictions and exclude model-refitting and independent-source uncertainty.
 

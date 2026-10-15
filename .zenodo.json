@@ -1,0 +1,36 @@
+{
+  "title": "leakcheck: screening reported classification results for the resampling-before-splitting artefact",
+  "upload_type": "software",
+  "version": "v1.0.1",
+  "publication_date": "2026-10-16",
+  "access_right": "open",
+  "license": "bsd-3-clause",
+  "creators": [
+    {
+      "name": "Le Ngoc, Hieu",
+      "affiliation": "Faculty of Information Technology 2, Posts and Telecommunications Institute of Technology",
+      "orcid": "0000-0002-1133-1433"
+    },
+    {
+      "name": "Huynh Ngoc Thanh, Trung",
+      "affiliation": "Faculty of Data Science, University of Finance – Marketing",
+      "orcid": "0009-0001-5785-6630"
+    }
+  ],
+  "description": "<p>leakcheck screens reported binary classification summaries for a controlled resampling-before-splitting signature. Version v1.0.1 uses a screening score and neutral review bands, rejects unsupported model families with ValueError, and keeps the existing v1.0.0 JSON model unchanged (SHA-256 6ad86351f6458c2318e7e88426dd67f3262b94d020753d245ef600df6ff25aa1).</p><p>The controlled corpus has 11,200 matched comparisons from 41 source datasets. Dataset-held-out AUC is 0.795 (cluster interval 0.743–0.849). Baselines, grouped uncertainty, per-source results, input sensitivity, and JSON-only interface demonstrations accompany the code. The full model has not demonstrated an advantage over F1-only or logistic baselines. The score is not a probability that a paper contains leakage. External diagnostic validation, hosted CI and a numerical test-coverage percentage have not been established.</p>",
+  "keywords": [
+    "data leakage",
+    "class imbalance",
+    "SMOTE",
+    "screening",
+    "research software",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/occbuu/leakcheck/tree/v1.0.1",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

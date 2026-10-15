@@ -5,3 +5,5 @@ From the repository root, install `Code/Paper2B/requirements_analysis.txt`, then
 The analysis uses the original result CSV and manifest directly. Cached predictions are checked against reconstructed record IDs, order, labels and F1. Dataset-held-out folds and cluster resamples retain both members of each pair. Existing fold timings are retained when cached predictions are reused.
 
 The main workspace keeps manuscript/response builders under `Code/Paper2B`. They require private journal email and LaTeX sources and are intentionally not distributed as public analysis code.
+
+`python Code/Paper2B/make_interface_assets.py` creates the interface workflow and the grid using the shipped JSON only, and retains the original density illustration. It does not fit a model.

@@ -1,0 +1,10 @@
+imbalance_ratio,f1,n_minority,n_features,clf,score,band
+2,0.45,200,30,RandomForest,0.06461616481415806,low screening score
+2,0.7,200,30,RandomForest,0.47520059549868054,intermediate screening score
+2,0.92,200,30,RandomForest,0.7449209697086201,high screening score - methods check recommended
+10,0.45,200,30,RandomForest,0.010667672771794411,low screening score
+10,0.7,200,30,RandomForest,0.05305170317178415,low screening score
+10,0.92,200,30,RandomForest,0.3690636854174213,intermediate screening score
+50,0.45,200,30,RandomForest,0.00939518833065616,low screening score
+50,0.7,200,30,RandomForest,0.056958266721082194,low screening score
+50,0.92,200,30,RandomForest,0.5022877204808678,intermediate screening score

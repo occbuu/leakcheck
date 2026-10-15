@@ -1,0 +1,11 @@
+{
+  "json_sha256": "6ad86351f6458c2318e7e88426dd67f3262b94d020753d245ef600df6ff25aa1",
+  "model_refitted": false,
+  "density_sha256": "96548d2fff45cc04b38c04df985b4636ab0bd348635d280cc742b6f63078b171",
+  "grid_source": "shipped JSON via leakcheck.check",
+  "grid_fixed_inputs": {
+    "n_minority": 200,
+    "n_features": 30,
+    "clf": "RandomForest"
+  }
+}

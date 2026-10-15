@@ -48,10 +48,6 @@ contact:
     affiliation: >-
       Faculty of Information Technology 2, Posts and Telecommunications
       Institute of Technology
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.22196497
-    description: Original manuscript archive identifier for v1.0.0; revised contents not verified
 preferred-citation:
   type: article
   title: >-
@@ -74,9 +70,9 @@ preferred-citation:
         Faculty of Data Science, University of Finance – Marketing
   url: "https://github.com/occbuu/leakcheck"
   notes: >-
-    Local revision of the Original Software Publication. The package uses
+    Software accompanying the Original Software Publication. The package uses
     a screening score rather than a calibrated study-level probability.
-    No new archival release or DOI is claimed for version 1.0.1. This research is funded by
+    Version 1.0.1 retains the unchanged v1.0.0 JSON model. This research is funded by
     University of Finance – Marketing, HCMC Vietnam, and is supported by
     Posts and Telecommunications Institute of Technology (PTIT), Vietnam.
     The authors declare that they have no known competing financial
