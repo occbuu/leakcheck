@@ -1,3 +1,10 @@
+# v1.0.2 public reproduction paths
+
+- Package version remains 1.0.1 and the JSON model is unchanged.
+- Moved revision scripts from `Code/Paper2B` to `Code/revision`.
+- Moved revision outputs from `results/paper2b_revision_v1` to `results/revision`.
+- Tag `v1.0.1` and DOI 10.5281/zenodo.23401828 still archive the previous directory names.
+
 # v1.0.1 revised screening interface
 
 - Replaced public probability wording with screening score and neutral review bands. The legacy property remains an alias for compatibility.

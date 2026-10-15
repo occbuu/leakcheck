@@ -6,9 +6,9 @@ The output is a **screening score**, not a calibrated probability that a publish
 
 ## Current revision
 
-Version **1.0.1** uses the unchanged v1.0.0 JSON weights, neutral review bands and strict supported-family handling. The GitHub release is tagged `v1.0.1`. Zenodo archiving is requested by the repository's existing GitHub integration, using `.zenodo.json` metadata.
+The package version remains **1.0.1**: unchanged v1.0.0 JSON weights, neutral review bands and strict supported-family handling. The public reproduction layout is tagged `v1.0.2`. Zenodo archiving is requested by the repository's GitHub integration, using `.zenodo.json` metadata.
 
-The earlier DOI 10.5281/zenodo.22196497 was checked: its source archive is the older `ef27ad0` corpus repository and does not contain the shipped `src/leakcheck` package. It is not used as the archive DOI for this interface release. The DOI for this version must be verified against the published v1.0.1 source archive.
+DOI [10.5281/zenodo.23401828](https://doi.org/10.5281/zenodo.23401828) archives tag `v1.0.1`, which still uses the previous directory names. The earlier DOI 10.5281/zenodo.22196497 archives the older `ef27ad0` corpus repository and does not contain the shipped `src/leakcheck` package.
 
 Project URL: https://github.com/occbuu/leakcheck
 

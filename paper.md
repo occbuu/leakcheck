@@ -138,7 +138,7 @@ shipped in `data/processed/` of this repository.
 
 # Revision status
 
-Version 1.0.1 keeps the original JSON weights and adds the screening-score interface. Dataset-cluster intervals and matched baselines are in `results/revision/`. External diagnostic validation has not been conducted. This version is archived at [10.5281/zenodo.23401828](https://doi.org/10.5281/zenodo.23401828).
+Package version 1.0.1 keeps the original JSON weights and the screening-score interface. Dataset-cluster intervals and matched baselines are in `results/revision/`. The public path layout is git tag v1.0.2. External diagnostic validation has not been conducted. Tag v1.0.1 is archived at [10.5281/zenodo.23401828](https://doi.org/10.5281/zenodo.23401828).
 
 # Data availability
 
