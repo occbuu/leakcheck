@@ -1,5 +1,5 @@
 """Create interface illustrations from the shipped JSON; never fit a model."""
-import hashlib,json,sys,shutil
+import hashlib,json,sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -7,7 +7,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch,FancyArrowPatch
-from revision_paths import ROOT,PACKAGE,RESULTS,MANUSCRIPT,SUBMISSION
+from revision_paths import PACKAGE,RESULTS
 
 def main():
     RESULTS.mkdir(parents=True,exist_ok=True)
@@ -30,14 +30,9 @@ def main():
             r=leakcheck.check(f1=f1,imbalance_ratio=ir,n_minority=200,n_features=30,clf='RandomForest')
             rows.append({'imbalance_ratio':ir,'f1':f1,'n_minority':200,'n_features':30,'clf':'RandomForest','score':r.score,'band':r.verdict})
     pd.DataFrame(rows).to_csv(RESULTS/'interface_grid.csv',index=False)
-    # Reuse the original density illustration without altering its underlying data.
-    original=MANUSCRIPT/'figures/image2.png'
     density=RESULTS/'f1_density.png'
-    if original.exists():shutil.copy2(original,density)
-    elif not density.exists():raise FileNotFoundError('The original F1 density image must accompany this script.')
-    if MANUSCRIPT.exists():
-        dst=SUBMISSION/'analysis';dst.mkdir(parents=True,exist_ok=True)
-        for name in ['user_workflow.pdf','f1_density.png']:shutil.copy2(RESULTS/name,dst/name)
+    if not density.exists():
+        raise FileNotFoundError('results/revision/f1_density.png must already be in the repository.')
     assert hashlib.sha256(model.read_bytes()).hexdigest()==before
     (RESULTS/'interface_assets_provenance.json').write_text(json.dumps({'json_sha256':before,'model_refitted':False,'density_sha256':hashlib.sha256(density.read_bytes()).hexdigest(),'grid_source':'shipped JSON via leakcheck.check','grid_fixed_inputs':{'n_minority':200,'n_features':30,'clf':'RandomForest'}},indent=2))
     print('Interface workflow and 9 JSON-only grid scores generated; model unchanged.')

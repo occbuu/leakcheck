@@ -3,7 +3,7 @@
 - Replaced public probability wording with screening score and neutral review bands. The legacy property remains an alias for compatibility.
 - Unsupported or missing classifier families now raise an error; approximate aliases for unrepresented algorithms are removed.
 - Added finite/integer/range checks and tests.
-- Added reproducible matched baselines, grouped uncertainty, per-source results, reliability/PR analysis, threshold/prevalence scenarios and input stress tests under `Code/Paper2B` and `results/paper2b_revision_v1`.
+- Added reproducible matched baselines, grouped uncertainty, per-source results, reliability/PR analysis, threshold/prevalence scenarios and input stress tests under `Code/revision` and `results/revision`.
 - Preserved JSON weights; 18 local tests pass. No external diagnostic validation, hosted CI or numerical coverage claim is made.
 
 - Added an interface workflow and a JSON-only F1 by imbalance grid; retained the original controlled-corpus density plot.

@@ -58,17 +58,17 @@ Nonfinite inputs, invalid ratios and noninteger counts are rejected. Inputs outs
 ## Reproduce the revision
 
 ```text
-python -m pip install -r Code/Paper2B/requirements_analysis.txt
-python Code/Paper2B/analyse_revision.py
-python Code/Paper2B/make_flow.py
-python Code/Paper2B/make_interface_assets.py
+python -m pip install -r Code/revision/requirements_analysis.txt
+python Code/revision/analyse_revision.py
+python Code/revision/make_flow.py
+python Code/revision/make_interface_assets.py
 ```
 
 The scripts locate files relative to the repository, independent of the current working directory. Existing complete-pair records are read from `results/raw_results.csv` and `data/processed/manifest.csv`. No duplicated corpus inputs or separate software snapshot is required.
 
-Revision outputs are in `results/paper2b_revision_v1/`: out-of-fold predictions, baselines, per-dataset and per-resampler metrics, reliability, grouped bootstrap, thresholds, prevalence scenarios, sensitivity, errors, the validation/SHAP/training figures, interface workflow, original density illustration, JSON-only F1 by imbalance grid and measured environment/provenance.
+Revision outputs are in `results/revision/`, including `summary.json`: out-of-fold predictions, baselines, per-dataset and per-resampler metrics, reliability, grouped bootstrap, thresholds, prevalence scenarios, sensitivity, errors, the validation/SHAP/training figures, interface workflow, original density illustration, JSON-only F1 by imbalance grid and measured environment/provenance.
 
-The analysis reuses the cached prediction file only if its record identities, order, labels and F1 values match the reconstructed source corpus. To refit all folds, move `oof_predictions.csv` aside first. The analysis retains paired records within each source-held-out fold and within 1,000 dataset-cluster bootstrap samples. Bootstrap intervals condition on fixed held-out predictions and exclude model-refitting and independent-source uncertainty.
+The analysis reuses the cached prediction file only if its record identities, order, labels and F1 values match the reconstructed source corpus. To refit all folds, move `results/revision/oof_predictions.csv` aside first. The analysis retains paired records within each source-held-out fold and within 1,000 dataset-cluster bootstrap samples. Bootstrap intervals condition on fixed held-out predictions and exclude model-refitting and independent-source uncertainty.
 
 ## Evidence and limits
 
@@ -86,10 +86,10 @@ The 18 local regression tests cover fixtures, aliases, unsupported families, val
 src/leakcheck/                  package and unchanged JSON weights
 tests/                        package tests
 Code/                          original training/export and notebook
-Code/Paper2B/                  current revision analysis and path resolver
+Code/revision/                revision analysis and path resolver
 data/processed/                original processed corpus and manifest
 results/raw_results.csv        original experimental record
-results/paper2b_revision_v1/    current revision results and figures
+results/revision/              revision results, figures and summary.json
 LICENSE.txt                    BSD licence with current author notices
 LICENSE                        original licence notices retained
 ```

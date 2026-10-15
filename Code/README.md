@@ -17,4 +17,4 @@ Runtime versions used for the reported run are recorded in `../results/summary.j
 
 ## October revision
 
-The current revision is reproduced by `Paper2B/analyse_revision.py` and `Paper2B/make_flow.py`; see `Paper2B/README.md`. Outputs are written to `../results/paper2b_revision_v1`. The export script above refits the original model and is not required to reproduce the revision analyses.
+The reported analyses are reproduced from the repository root by `Code/revision/analyse_revision.py`, `Code/revision/make_flow.py` and `Code/revision/make_interface_assets.py`; see `Code/revision/README.md`. Outputs are written to `results/revision/`. The export script above refits the original model and is not required to reproduce those analyses.

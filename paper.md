@@ -138,12 +138,12 @@ shipped in `data/processed/` of this repository.
 
 # Revision status
 
-Version 1.0.1 is a local revision. Dataset-cluster intervals and matched baselines are provided in `results/paper2b_revision_v1`. External diagnostic validation and a verified new archive are outstanding. The historical archive identifier below does not establish deposit of this revision.
+Version 1.0.1 keeps the original JSON weights and adds the screening-score interface. Dataset-cluster intervals and matched baselines are in `results/revision/`. External diagnostic validation has not been conducted. This version is archived at [10.5281/zenodo.23401828](https://doi.org/10.5281/zenodo.23401828).
 
 # Data availability
 
 The source code and associated materials are available from the
-[occbuu/leakcheck](https://github.com/occbuu/leakcheck) repository and the original manuscript cites the archive identifier
-[10.5281/zenodo.22196497](https://doi.org/10.5281/zenodo.22196497).
+[occbuu/leakcheck](https://github.com/occbuu/leakcheck) repository and are archived at
+[10.5281/zenodo.23401828](https://doi.org/10.5281/zenodo.23401828).
 
 # References
