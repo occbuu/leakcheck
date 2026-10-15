@@ -11,4 +11,4 @@ venv/
 output/
 
 # Publication figures are intentional, unlike temporary rendered documents.
-!results/paper2b_revision_v1/*.pdf
+!results/revision/*.pdf
