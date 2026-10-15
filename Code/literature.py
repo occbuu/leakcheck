@@ -51,7 +51,11 @@ def frame() -> pd.DataFrame:
 
 
 def screened() -> pd.DataFrame:
-    """Attach a screening probability to each reported result, if leakcheck is installed."""
+    """Attach the leakcheck probability to each reported result."""
+    import sys
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(root / "src"))
     import leakcheck
     d = frame()
     d["p_leaked"] = [

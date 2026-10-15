@@ -1,8 +1,84 @@
 cff-version: 1.2.0
-message: If you use this archive, please cite it.
-title: Replication code for the leakage-premium study
-version: 1.0.0
+message: If you use this software, please cite it as below.
+type: software
+title: "leakcheck: screening reported classification results for the resampling-before-splitting artefact"
+version: 1.0.1
 license: BSD-3-Clause
-date-released: "2026-08-31"
+url: "https://github.com/occbuu/leakcheck"
+repository-code: "https://github.com/occbuu/leakcheck"
+abstract: >-
+  leakcheck estimates whether a published classification result resembles
+  the statistical pattern produced, in a controlled corpus, by applying a
+  synthetic over-sampler before splitting a dataset into training and test
+  partitions rather than to the training partition alone. It takes only
+  quantities that papers commonly report — the headline minority-class F1,
+  the imbalance ratio, the number of minority cases, the number of features
+  and the model family — and returns a bounded screening score
+  together with a short written explanation. The screening model is a
+  gradient-boosted classifier trained on 22,400 labelled results from 41
+  public datasets; leave-one-dataset-out validation gives an AUC of 0.795
+  and a Brier score of 0.197. The output is a triage signal rather than a
+  causal finding of leakage.
+keywords:
+  - data leakage
+  - class imbalance
+  - SMOTE
+  - peer review
+  - research software
+  - reproducibility
 authors:
-  - name: Author names withheld for review
+  - family-names: Le Ngoc
+    given-names: Hieu
+    orcid: "https://orcid.org/0000-0002-1133-1433"
+    email: lnhieu@ptit.edu.vn
+    affiliation: >-
+      Faculty of Information Technology 2, Posts and Telecommunications
+      Institute of Technology
+  - family-names: Huynh Ngoc Thanh
+    given-names: Trung
+    orcid: "https://orcid.org/0009-0001-5785-6630"
+    email: hnttrung@ufm.edu.vn
+    affiliation: >-
+      Faculty of Data Science, University of Finance – Marketing
+contact:
+  - family-names: Le Ngoc
+    given-names: Hieu
+    orcid: "https://orcid.org/0000-0002-1133-1433"
+    email: lnhieu@ptit.edu.vn
+    affiliation: >-
+      Faculty of Information Technology 2, Posts and Telecommunications
+      Institute of Technology
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22196497
+    description: Original manuscript archive identifier for v1.0.0; revised contents not verified
+preferred-citation:
+  type: article
+  title: >-
+    leakcheck: screening reported classification results for the
+    resampling-before-splitting artefact
+  year: 2026
+  authors:
+    - family-names: Le Ngoc
+      given-names: Hieu
+      orcid: "https://orcid.org/0000-0002-1133-1433"
+      email: lnhieu@ptit.edu.vn
+      affiliation: >-
+        Faculty of Information Technology 2, Posts and Telecommunications
+        Institute of Technology
+    - family-names: Huynh Ngoc Thanh
+      given-names: Trung
+      orcid: "https://orcid.org/0009-0001-5785-6630"
+      email: hnttrung@ufm.edu.vn
+      affiliation: >-
+        Faculty of Data Science, University of Finance – Marketing
+  url: "https://github.com/occbuu/leakcheck"
+  notes: >-
+    Local revision of the Original Software Publication. The package uses
+    a screening score rather than a calibrated study-level probability.
+    No new archival release or DOI is claimed for version 1.0.1. This research is funded by
+    University of Finance – Marketing, HCMC Vietnam, and is supported by
+    Posts and Telecommunications Institute of Technology (PTIT), Vietnam.
+    The authors declare that they have no known competing financial
+    interests or personal relationships that could have appeared to
+    influence the work reported in this paper.

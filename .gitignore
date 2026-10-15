@@ -7,4 +7,8 @@ __pycache__/
 .venv/
 venv/
 *.docx
+*.pdf
 output/
+
+# Publication figures are intentional, unlike temporary rendered documents.
+!results/paper2b_revision_v1/*.pdf
